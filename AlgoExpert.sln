@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgoExpert", "AlgoExpert\AlgoExpert.csproj", "{8936097E-A4C3-4738-B59B-AB9C7DC3F274}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questions", "Questions\Questions.csproj", "{70E03531-D373-4658-B373-8983CC75B66F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questions", "Questions.csproj", "{0AD1B0BB-77DE-4154-85BE-036198CB7D61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8936097E-A4C3-4738-B59B-AB9C7DC3F274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8936097E-A4C3-4738-B59B-AB9C7DC3F274}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8936097E-A4C3-4738-B59B-AB9C7DC3F274}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8936097E-A4C3-4738-B59B-AB9C7DC3F274}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70E03531-D373-4658-B373-8983CC75B66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70E03531-D373-4658-B373-8983CC75B66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70E03531-D373-4658-B373-8983CC75B66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70E03531-D373-4658-B373-8983CC75B66F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD1B0BB-77DE-4154-85BE-036198CB7D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD1B0BB-77DE-4154-85BE-036198CB7D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD1B0BB-77DE-4154-85BE-036198CB7D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD1B0BB-77DE-4154-85BE-036198CB7D61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
