@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace AlgoExpert.Easy
 {
     [TestFixture]
-    class _01_TwoNumberSum
+    class Arrays_TwoNumberSum
     {
         [TestCase(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10, ExpectedResult = new int[] { -1, 11 })]
         [TestCase(new int[] { 3, 5, -4, 8, 11, 1, 6 }, 10, ExpectedResult = new int[] { })]
