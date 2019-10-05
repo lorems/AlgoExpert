@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using static Questions.Easy.Graphs_DepthFirstSearch;
+using static Questions.Easy.LinkedLists_Construction;
 
 namespace ConsoleApp
 {
@@ -10,15 +10,22 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            var n = new Node("R");
-            n.Init();
+            //DoublyLinkedList dl = new DoublyLinkedList();
+            //dl.Init();
 
-            var lst = n.DepthFirstSearch(new List<string>());
+            //var lst = dl.ToList();
 
-            foreach (var item in lst)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in lst)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //var node = dl.Head;
+            //while (node.Next != null)
+            //{
+            //    Console.WriteLine(node.Next.Value);
+            //    node = node.Next;
+            //}
         }
     }
 }
