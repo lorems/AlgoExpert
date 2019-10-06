@@ -123,9 +123,9 @@ namespace Questions.Easy
                 InsertAtPosition(2, new Node(2));
 
                 var lst = new List<int> { 1, 2 };
-                CollectionAssert.AreEquivalent(lst, ToList());
+                CollectionAssert.AreEqual(lst, ToList());
                 lst.Reverse();
-                CollectionAssert.AreEquivalent(lst, ToReverseList());
+                CollectionAssert.AreEqual(lst, ToReverseList());
             }
 
             [Test]
@@ -133,16 +133,16 @@ namespace Questions.Easy
             {
                 var first = new Node(1);
                 var second = new Node(2);
-                var third = new Node(2);
+                var third = new Node(3);
 
                 InsertAtPosition(1, first);
                 InsertAtPosition(2, second);
                 InsertAtPosition(2, third);
 
                 var lst = new List<int> { 1, 3, 2 };
-                CollectionAssert.AreEquivalent(lst, ToList());
+                CollectionAssert.AreEqual(lst, ToList());
                 lst.Reverse();
-                CollectionAssert.AreEquivalent(lst, ToReverseList());
+                CollectionAssert.AreEqual(lst, ToReverseList());
             }
 
             public List<int> ToList()
@@ -183,6 +183,7 @@ namespace Questions.Easy
 
             public void setHead(Node node)
             {
+                Remove(node);
                 if (this.Head == null)
                 {
                     this.Head = node;
@@ -198,6 +199,7 @@ namespace Questions.Easy
 
             public void SetTail(Node node)
             {
+                Remove(node);
                 if (this.Tail == null)
                 {
                     this.Tail = node;
@@ -235,36 +237,25 @@ namespace Questions.Easy
 
             public void InsertAtPosition(int position, Node nodeToInsert)
             {
-                if (this.Head == null)
+                --position;
+                Remove(nodeToInsert);
+
+                if (this.Head == null || position == 0)
                 {
                     setHead(nodeToInsert);
                     return;
                 }
 
-                var curr = this.Head;
-                --position;
+                int i = 1;
+                Node curr = this.Head;
 
-                for (int i = 0; i < position; i++)
+                while (curr.Next != null && i < position)
                 {
-                    if (curr.Next == null)
-                        break;
-
                     curr = curr.Next;
+                    i++;
                 }
 
-                if (position == 0)
-                    InsertBefore(this.Head, nodeToInsert);
-                else 
-                    InsertBefore(curr, nodeToInsert);
-                
-
-                //if (position == 0)
-                //    InsertBefore(this.Head, nodeToInsert);
-                //else if (curr != this.Tail)
-                //    InsertBefore(curr, nodeToInsert);
-                //else
-                //    InsertAfter(this.Tail, nodeToInsert);
-
+                InsertAfter(curr, nodeToInsert);
             }
 
             public void RemoveNodesWithValue(int value)
