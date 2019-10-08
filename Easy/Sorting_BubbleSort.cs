@@ -42,6 +42,8 @@ namespace Questions.Easy
         [TestCase(new int[] { 8, 5, 2, 9, 5, 6, 3 }, ExpectedResult = new int[] { 2, 3, 5, 5, 6, 8, 9 })]
         [TestCase(new int[] { 2, 1, 3 }, ExpectedResult = new int[] { 1, 2, 3 })]
         [TestCase(new int[] { }, ExpectedResult = new int[] { })]
+        // Time O(n^2)
+        // Space O(1)
         public static int[] BubbleSortV2(int[] array)
         {
             bool isSorted = false;
