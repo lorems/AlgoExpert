@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AlgoExpert.Easy
+namespace Questions.Easy
 {
     [TestFixture]
     class Arrays_TwoNumberSum
