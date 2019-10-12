@@ -33,6 +33,7 @@ using System.Text;
 
 namespace Questions.Medium
 {
+    [TestFixture]
     class BST_Construction
     {
         [Test]
