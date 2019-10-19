@@ -30,30 +30,30 @@ namespace Questions.Medium
 
         public static void RemoveKthNodeFromEnd(LinkedList head, int k)
         {
-            var right = head;
             var left = head;
+            var right = head;
             int idx = 1;
 
             while (idx <= k)
             {
-                left = left.Next;
+                right = right.Next;
                 ++idx;
             }
 
-            if (left == null)
+            if (right == null)
             {
                 head.Value = head.Next.Value;
                 head.Next = head.Next.Next;
                 return;
             }                
 
-            while (left.Next != null)
+            while (right.Next != null)
             {
-                left = left.Next;
                 right = right.Next;
+                left = left.Next;
             }
 
-            right.Next = right.Next.Next;
+            left.Next = left.Next.Next;
         }
 
         public class LinkedList
