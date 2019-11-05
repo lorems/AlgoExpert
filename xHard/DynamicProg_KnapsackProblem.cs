@@ -51,21 +51,17 @@ namespace Questions.xHard
             Assert.That(KnapsackProblem(inputKnapsackContent, inputKnapsackMaxWeight), Is.EqualTo(expected));
         }
 
-        public static List<List<int>> KnapsackProblem(int[,] _items, int capacity)
+        public static List<List<int>> KnapsackProblem(int[,] items, int capacity)
         {
-            var items = new int[_items.GetLength(0) + 1, _items.GetLength(1)];
-            items[0, 0] = 0;
-            items[0, 1] = 0;
-            Array.Copy(_items, 0, items, 2, _items.Length);
-            var matrix = new int[capacity + 1, items.GetLength(0)];
+            var matrix = new int[capacity + 1, items.GetLength(0) + 1];
 
             for (int y = 1; y < matrix.GetLength(1); y++)
             {
                 for (int x = 0; x < matrix.GetLength(0); x++)
                 {
                     var currentKnapsackWeights = x;
-                    int itemValue = items[y, 0];
-                    int itemWeight = items[y, 1];
+                    int itemValue = items[y - 1, 0];
+                    int itemWeight = items[y - 1, 1];
                     int weightDiff = currentKnapsackWeights - itemWeight;
 
                     if (itemWeight > currentKnapsackWeights)
@@ -97,7 +93,7 @@ namespace Questions.xHard
                 if (currentValue != topValue)
                 {
                     indexes.AddFirst(y - 1);
-                    int itemWeight = items[y, 1];
+                    int itemWeight = items[y - 1, 1];
                     int targetWeight = x - itemWeight;
                     x = targetWeight;
                 }
